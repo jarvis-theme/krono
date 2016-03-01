@@ -21,7 +21,7 @@
                     <li class="page-next fright"><a href="{{blog_url(next_blog())}}">next</a></li>
                 @else
                     <li></li>
-                @endif            
+                @endif
           </ul>
         </div>
         <div class="clearfix"></div>

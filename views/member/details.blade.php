@@ -41,7 +41,7 @@
                                 @endif
                                 </ul>
                             </td>
-                            <td>{{ price($item->total)  }}</td>
+                            <td>{{ price($item->total) }}</td>
                             <td class="break">{{ $item->noResi }}</td>
                             <td>
                             @if($pengaturan->checkoutType==1) 

@@ -55,7 +55,7 @@
                 </div>
                 <div>
                     <div class="picker">
-                        {{Form::select('negara',array('' => '-- Pilih Negara --') + $negara,Input::old('negara'),array('required', "id"=>"negara", "data-rel"=>"chosen", "class"=>"wide", "name"=>"negara", "onchange"=>"searchProvinsi(this.value)"))}}
+                        {{Form::select('negara',array('' => '-- Pilih Negara --') + $negara, Input::old('negara'),array('required', "id"=>"negara", "data-rel"=>"chosen", "class"=>"wide", "name"=>"negara", "onchange"=>"searchProvinsi(this.value)"))}}
                     </div>
                 </div>
             </div>

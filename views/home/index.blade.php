@@ -2,22 +2,22 @@
     <section>
         <h2>Produk <span>Kami</span></h2>
         <ul>
-            @foreach(home_product() as $latest)
+            @foreach(home_product() as $product)
             <li class="product">
                 <div class="post-image">
-                    <a href="{{product_url($latest)}}"><img src="{{url(product_image_url($latest->gambar1,'medium'))}}" alt="{{$latest->nama}}"></a>
+                    <a href="{{product_url($product)}}"><img src="{{url(product_image_url($product->gambar1,'medium'))}}" alt="{{$product->nama}}"></a>
                 </div>
-                @if(is_outstok($latest))
+                @if(is_outstok($product))
                 <span class="sold">Kosong</span>
-                @elseif(is_terlaris($latest))
+                @elseif(is_terlaris($product))
                 <span class="hot">Terlaris</span>
-                @elseif(is_produkbaru($latest))
+                @elseif(is_produkbaru($product))
                 <span class="new">Terbaru</span>
                 @endif
                 <div class="product-detail">
-                    <h4 class="post-title"><a href="{{product_url($latest)}}">{{short_description($latest->nama, 21)}}</a></h4>
-                    <span class="price"><span class="amount">{{price($latest->hargaJual)}}</span></span>
-                    <a href="{{product_url($latest)}}" class="add_to_cart"><i class="fi-shopping-cart"></i></a>          
+                    <h4 class="post-title"><a href="{{product_url($product)}}">{{short_description($product->nama, 21)}}</a></h4>
+                    <span class="price"><span class="amount">{{price($product->hargaJual)}}</span></span>
+                    <a href="{{product_url($product)}}" class="add_to_cart"><i class="fi-shopping-cart"></i></a>          
                 </div>
             </li>
             @endforeach

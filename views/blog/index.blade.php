@@ -4,7 +4,7 @@
     <article>
         @foreach(list_blog(null, @$blog_category) as $value)
         <section>
-            <h2><a href="{{blog_url($value)}}">{{$value->judul}}</a></h2>                   
+            <h2><a href="{{blog_url($value)}}">{{$value->judul}}</a></h2>
             <div class="meta">
                 <i class="fi-calendar"></i> {{waktuTgl($value->created_at)}} <i class="fi-folder"></i> <a href="{{blog_category_url(@$value->kategori)}}">{{@$value->kategori->nama}}</a>
             </div>

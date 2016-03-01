@@ -92,9 +92,9 @@
             <h1 class="confirmation-title">Konfirmasi Pembayaran</h1>
             <hr>
             @if($checkouttype==1)   
-            {{-- */ $linkurl = 'konfirmasiorder' /* --}}  
-            @else                         
-            {{-- */ $linkurl = 'konfirmasipreorder' /* --}}  
+            {{-- */ $linkurl = 'konfirmasiorder' /* --}} 
+            @else 
+            {{-- */ $linkurl = 'konfirmasipreorder' /* --}} 
             @endif
             {{Form::open(array('url'=> $linkurl.'/'.$order->id, 'method'=>'put'))}} 
                 <div class="form-group">
@@ -116,7 +116,7 @@
                 </div>
                 <div class="form-group">
                     <label class="control-label"> Jumlah:</label>
-                    @if($checkouttype==1)        
+                    @if($checkouttype==1) 
                     <input type="text" class="form-control" placeholder="Jumlah Transfer" name="jumlah" value="{{$order->status==0 ? $order->total : ''}}" required>
                     @else
                         @if($order->status < 2)
@@ -177,6 +177,9 @@
         <p>Silahkan melakukan pembayaran dengan bitcoin Anda secara online via bitcoin payment gateway. Transaksi ini berlaku jika pembayaran dilakukan sebelum <b>{{$expired_bitcoin}}</b>. Klik tombol "Pay with Bitcoin" di bawah untuk melanjutkan proses pembayaran.</p>
         {{$bitcoinbutton}}
         <br>
+        @else
+        <h3><center>Konfirmasi Pembayaran Via Bitcoin</center></h3><br>
+        <p><center><b>Batas waktu pembayaran bicoin anda telah habis.</b></center></p>
         @endif
     @endif
 </section>

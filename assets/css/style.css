@@ -101,8 +101,8 @@ table{border-collapse:collapse;border-spacing:0}
 th{border-bottom:1px solid #b7b7b7;font-weight:800;padding:.75em 5px;text-align:left}
 td{border-bottom:1px solid #ddd;padding:.75em 5px}tr,td,th{vertical-align:middle}
 .button{padding: 10px; background: #000; color: #fff; border-radius: 5px}
-
 table ul li{list-style: outside; margin-left: 10px}
+.maps{float:right;width:100%}
 
 @media screen and (max-width: 360px){
 	.product .post-image{min-width: 210px}
