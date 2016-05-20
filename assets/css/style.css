@@ -103,11 +103,64 @@ td{border-bottom:1px solid #ddd;padding:.75em 5px}tr,td,th{vertical-align:middle
 .button{padding: 10px; background: #000; color: #fff; border-radius: 5px}
 table ul li{list-style: outside; margin-left: 10px}
 .maps{float:right;width:100%}
+center#paypal button[type="submit"] {
+	background: #019CDE;
+	border: none;
+	padding: 10px;
+	color: #fff;
+	border-radius: 5px;
+}
+center#paypal button[type="submit"]:hover { opacity: 0.6; cursor: pointer; }
+form[name="order"] > input[name="SAVE"] {
+	background: #B5062D; border: medium none; padding: 10px; border-radius: 5px; color: #fff;
+	font-size: 0.8em;
+}
+form[name="order"] > input[name="SAVE"]:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+.btn-veritrans { background: #00aee7; border: none; padding: 10px; color: #fff }
+.btn-veritrans:hover { cursor: pointer; opacity: 0.7 }
+.well {
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: #f5f5f5;
+	border-radius: 5px;
+}
+.form-control {
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+		 -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+			transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
 
 @media screen and (max-width: 360px){
 	.product .post-image{min-width: 210px}
 	.product .product-detail .price ins{display: inline-block;}
 	ol.dots{display: none;}
+	center#paypal button[type="submit"] {
+		font-size: 10px;
+	}
+}
+@media screen and (max-width: 480px){
+	center#paypal button[type="submit"] {
+		max-width: 100%;
+		overflow: hidden;
+		font-size: 13px;
+	}
 }
 @media only screen and (width: 640px){
 	.product .post-image{min-height: 195px}
@@ -136,4 +189,3 @@ table ul li{list-style: outside; margin-left: 10px}
 @media screen and (max-width: 860px){
 	.centered-navigation ul li.nav-link{text-align: center;}
 }
-

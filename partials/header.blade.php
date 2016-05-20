@@ -24,7 +24,7 @@
                     </div>
                 </li>
                 <li id="shoppingcartplace">
-                    {{shopping_cart()}}
+                    {{shopping_cart()}} 
                 </li>
             </ul>
         </nav>

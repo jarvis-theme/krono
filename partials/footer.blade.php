@@ -19,7 +19,9 @@
         <ul>
             <li><h3>Pembayaran</h3></li>
             @foreach(list_banks() as $value)
+                @if($value->status == 1)
                 <li><img src="{{bank_logo($value)}}" alt="{{$value->bankdefault->nama}}" title="{{$value->bankdefault->nama}}" /></li>
+                @endif
             @endforeach
             @foreach(list_payments() as $pay)
                 @if($pay->nama == 'ipaymu' && $pay->aktif == 1)
@@ -35,6 +37,9 @@
             @if(count(list_dokus()) > 0 && list_dokus()->status == 1)
             <li><img src="{{url('img/bank/doku.jpg')}}" alt="doku myshortcart" title="Doku" /></li>
             @endif
+            @if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
+            <li><img src="{{url('img/bank/veritrans.png')}}" alt="Veritrans" title="Veritrans"></li>
+            @endif
         </ul>
         <ul>
             <li>{{ Theme::partial('subscribe') }}</li>
@@ -45,4 +50,4 @@
     <p>&copy; {{ Theme::place('title') }} {{date('Y')}} All Right Reserved. Powered by <a href="http://jarvis-store.com" 
     target="_blank">Jarvis Store</a></p>
 </div>
-{{pluginPowerup()}}
+{{pluginPowerup()}} 

@@ -125,7 +125,7 @@
             </li>
             <li class="tab-header-and-content">
                 <a href="#" class="tab-link">Review</a>
-                <div class="tab-content">{{pluginTrustklik()}}</div>
+                <div class="tab-content">{{ pluginComment(product_url($produk), @$produk) }}</div>
             </li>
         </ul>
         @if(count(other_product($produk)) > 0)

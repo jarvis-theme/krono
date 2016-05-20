@@ -5,17 +5,17 @@
                 <li>
                     <div class="slider-image">
                         <img src="{{slide_image_url($slide->gambar)}}" alt="slideshow">
+                        @if(!empty($slide->text))
                         <div class="slider-content">
                             <div class="slider-desc">
-                                @if(!empty($slide->title))
                                 <h2 class="title">{{$slide->title}}</h2>
-                                @endif
                                 <p>{{$slide->text}}</p>
                                 @if(!empty($slide->url))
                                 <a href="{{filter_link_url($slide->url)}}" class="button">Lihat</a>
                                 @endif
                             </div>
                         </div>
+                        @endif
                     </div>
                 </li>
                 @endforeach
